@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: Aris
+Build-Jdk: 11.0.2
+Implementation-Title: user-management
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: id
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/user-managemen
+ t/
+Created-By: Maven Integration for Eclipse
+

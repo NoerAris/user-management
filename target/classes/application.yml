@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: User-Management
+  datasource:
+    url: jdbc:mysql://localhost:3306/user-management?zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=UTF-8&characterSetResults=UTF-8
+    username: root
+    password: 
+    driverClassName: com.mysql.jdbc.Driver
+    max-active: 100
+    test-while-idle: true
+    test-on-borrow: true
+    validation-query: SELECT 1
+    time-between-eviction-run-millis: 5000
+    min-evictable-idle-time-millis: 6000
+  jpa:
+    properties:
+      hibernate:
+        database-platform: default
+        show_sql: true
+        use_sql_comments: false
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 7011
+  context-path: /
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  file: logs/user-management.log
+security:
+  basic:
+    enabled: false
+  oauth2:
+    resource:
+      filter-order: 3
+  jwt:
+    secret: "xFgXy76H7{@3s!"
+management:
+  security:
+    enabled: true
